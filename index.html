@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pattern Matching Engine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Text Pattern Matching Engine</h1>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <div class="input-group">
+        <label for="textInput">Text Input:</label>
+        <textarea id="textInput" placeholder="Paste large text here..."></textarea>
+      </div>
+      <div class="input-group">
+        <label for="patternInput">Pattern:</label>
+        <input type="text" id="patternInput" placeholder="Enter pattern">
+      </div>
+      <div class="input-group">
+        <label for="algoSelect">Algorithm:</label>
+        <select id="algoSelect">
+          <option value="kmp">KMP</option>
+          <option value="rabinKarp">Rabin-Karp</option>
+          <option value="zAlgo">Z-Algorithm</option>
+        </select>
+      </div>
+      <button onclick="runSearch()" class="search-btn">Search</button>
+    </section>
+
+    <section class="results-section">
+      <div id="stats"></div>
+      <div id="output"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
